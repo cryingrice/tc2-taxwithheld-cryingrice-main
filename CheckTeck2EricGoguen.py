@@ -13,13 +13,13 @@
 
 def main():
     # YOUR CODE STARTS HERE, each line must be indented (one tab)
-    salary = 500
-    dependant = 3
-    provincialTax = float(salary / 100 * 6.0)
-    federalTax = float(salary / 100 * 25.0)
-    dependantTax = float(salary / 100 * 2 * 3)
+    salary = input("what's your weekly salary?: ")
+    dependant = input("how many dependants are you responsible for?: ")
+    provincialTax = float(int(salary) / 100 * 6.0)
+    federalTax = float(int(salary) / 100 * 25.0)
+    dependantTax = float(int(salary) / 100 * 2 * int(dependant))
     totalTax = float(provincialTax + federalTax + dependantTax)
-    moneyAfterTax = float(salary - totalTax)
+    moneyAfterTax = float(int(salary) - totalTax)
     print("the provincial tax deduction is: {0}" .format (provincialTax))
     print("the federal tax deduction is: {0}" .format(federalTax))
     print("the dependant deduction is: {0}" .format(dependantTax))
